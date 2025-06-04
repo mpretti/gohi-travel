@@ -12,6 +12,11 @@ import MobileBookingFlow from '../components/sections/MobileBookingFlow';
 import TravelConcierge from '../components/sections/TravelConcierge';
 import FlexibleBooking from '../components/sections/FlexibleBooking';
 import PostBookingHub from '../components/sections/PostBookingHub';
+import HyperLocalAdventures from '../components/sections/HyperLocalAdventures';
+import TravelImpactDashboard from '../components/sections/TravelImpactDashboard';
+import SensoryTravelExperiences from '../components/sections/SensoryTravelExperiences';
+import AITravelStoryteller from '../components/sections/AITravelStoryteller';
+import SkillBuildingAdventures from '../components/sections/SkillBuildingAdventures';
 
 export default function Home() {
   return (
@@ -29,6 +34,11 @@ export default function Home() {
       <TravelConcierge />
       <FlexibleBooking />
       <PostBookingHub />
+      <HyperLocalAdventures />
+      <TravelImpactDashboard />
+      <SensoryTravelExperiences />
+      <AITravelStoryteller />
+      <SkillBuildingAdventures />
       <Testimonials />
       
       {/* Final Call to Action */}
