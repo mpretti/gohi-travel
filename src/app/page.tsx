@@ -2,6 +2,7 @@ import Hero from '../components/sections/Hero';
 import SearchAndFilter from '../components/sections/SearchAndFilter';
 import TripPlanner from '../components/sections/TripPlanner';
 import VirtualPreviews from '../components/sections/VirtualPreviews';
+import PersonalizedRecommendations from '../components/sections/PersonalizedRecommendations';
 import DestinationsShowcase from '../components/sections/DestinationsShowcase';
 import ExperiencesShowcase from '../components/sections/ExperiencesShowcase';
 import Testimonials from '../components/sections/Testimonials';
@@ -13,6 +14,7 @@ export default function Home() {
       <SearchAndFilter />
       <TripPlanner />
       <VirtualPreviews />
+      <PersonalizedRecommendations />
       <DestinationsShowcase />
       <ExperiencesShowcase />
       <Testimonials />
