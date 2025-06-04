@@ -1,4 +1,7 @@
 import Hero from '../components/sections/Hero';
+import SearchAndFilter from '../components/sections/SearchAndFilter';
+import TripPlanner from '../components/sections/TripPlanner';
+import VirtualPreviews from '../components/sections/VirtualPreviews';
 import DestinationsShowcase from '../components/sections/DestinationsShowcase';
 import ExperiencesShowcase from '../components/sections/ExperiencesShowcase';
 import Testimonials from '../components/sections/Testimonials';
@@ -7,6 +10,9 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <SearchAndFilter />
+      <TripPlanner />
+      <VirtualPreviews />
       <DestinationsShowcase />
       <ExperiencesShowcase />
       <Testimonials />
