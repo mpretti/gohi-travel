@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Play, MapPin, Thermometer, Cloud, Sun, CloudRain, Eye, Camera, Map, Calendar, Star } from 'lucide-react';
+import Image from 'next/image';
+import { Play, MapPin, Thermometer, Cloud, Sun, CloudRain, Eye, Camera, Map, Star } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Destination {
@@ -157,12 +158,14 @@ export default function VirtualPreviews() {
                         : 'bg-gray-50 border-2 border-transparent hover:bg-gray-100'
                     }`}
                   >
-                    <div className="flex items-center space-x-3">
-                      <img
-                        src={destination.image}
-                        alt={destination.name}
-                        className="w-16 h-16 rounded-lg object-cover"
-                      />
+                                         <div className="flex items-center space-x-3">
+                       <Image
+                         src={destination.image}
+                         alt={destination.name}
+                         width={64}
+                         height={64}
+                         className="w-16 h-16 rounded-lg object-cover"
+                       />
                       <div className="flex-1 min-w-0">
                         <h4 className="font-semibold text-gray-900">{destination.name}</h4>
                         <p className="text-sm text-gray-500">{destination.country}</p>
@@ -262,7 +265,7 @@ export default function VirtualPreviews() {
                   return (
                     <button
                       key={view.id}
-                      onClick={() => setActiveView(view.id as any)}
+                                             onClick={() => setActiveView(view.id as 'gallery' | 'video' | 'panorama' | 'map')}
                       className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                         activeView === view.id
                           ? 'bg-blue-600 text-white'
@@ -289,11 +292,13 @@ export default function VirtualPreviews() {
                     transition={{ duration: 0.3 }}
                     className="relative"
                   >
-                    <img
-                      src={selectedDestination.image}
-                      alt={selectedDestination.name}
-                      className="w-full h-96 object-cover"
-                    />
+                                         <Image
+                       src={selectedDestination.image}
+                       alt={selectedDestination.name}
+                       width={800}
+                       height={384}
+                       className="w-full h-96 object-cover"
+                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                     <div className="absolute bottom-6 left-6 text-white">
                       <h4 className="text-2xl font-bold mb-2">Photo Gallery</h4>
@@ -311,11 +316,13 @@ export default function VirtualPreviews() {
                     transition={{ duration: 0.3 }}
                     className="relative"
                   >
-                    <img
-                      src={selectedDestination.video}
-                      alt={`${selectedDestination.name} video`}
-                      className="w-full h-96 object-cover"
-                    />
+                                         <Image
+                       src={selectedDestination.video}
+                       alt={`${selectedDestination.name} video`}
+                       width={800}
+                       height={384}
+                       className="w-full h-96 object-cover"
+                     />
                     <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                       <button className="bg-white/20 backdrop-blur-sm rounded-full p-6 hover:bg-white/30 transition-all duration-300">
                         <Play className="h-12 w-12 text-white ml-1" />
@@ -337,11 +344,13 @@ export default function VirtualPreviews() {
                     transition={{ duration: 0.3 }}
                     className="relative"
                   >
-                    <img
-                      src={selectedDestination.panorama}
-                      alt={`${selectedDestination.name} 360°`}
-                      className="w-full h-96 object-cover"
-                    />
+                                         <Image
+                       src={selectedDestination.panorama}
+                       alt={`${selectedDestination.name} 360°`}
+                       width={800}
+                       height={384}
+                       className="w-full h-96 object-cover"
+                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                     <div className="absolute top-6 right-6">
                       <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 text-white text-sm font-medium">

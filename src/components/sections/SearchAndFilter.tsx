@@ -109,7 +109,7 @@ export default function SearchAndFilter() {
     }
   }, [filters.query]);
 
-  const handleFilterChange = (key: keyof SearchFilters, value: any) => {
+  const handleFilterChange = (key: keyof SearchFilters, value: string | string[]) => {
     setFilters(prev => ({ ...prev, [key]: value }));
   };
 

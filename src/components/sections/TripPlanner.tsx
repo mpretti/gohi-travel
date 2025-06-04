@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Plus, Calendar, MapPin, Clock, DollarSign, Users, Share2, Download, Trash2, GripVertical } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -197,9 +198,11 @@ export default function TripPlanner() {
                     className="bg-gray-50 rounded-lg p-3 cursor-move hover:bg-gray-100 transition-colors duration-200 border-2 border-transparent hover:border-blue-200"
                   >
                     <div className="flex items-center space-x-3">
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.title}
+                        width={48}
+                        height={48}
                         className="w-12 h-12 rounded-lg object-cover"
                       />
                       <div className="flex-1 min-w-0">
@@ -368,9 +371,11 @@ export default function TripPlanner() {
                             className="bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-300 transition-colors duration-200"
                           >
                             <div className="flex items-center space-x-4">
-                              <img
+                              <Image
                                 src={item.image}
                                 alt={item.title}
+                                width={64}
+                                height={64}
                                 className="w-16 h-16 rounded-lg object-cover"
                               />
                               <div className="flex-1">
